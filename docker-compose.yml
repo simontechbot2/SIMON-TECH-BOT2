@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  simon-tech-bot:
+    build: .
+    container_name: simon-tech-bot
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - OWNER_NUMBER=234XXXXXXXXXX
+      - BOT_NAME=SIMON TECH BOT
+      - PREFIX=.
+      - TELEGRAM_TOKEN=YOUR_TELEGRAM_BOT_TOKEN
+      - BOT_MODE=public
+      - AUTO_READ=true
+      - AUTO_TYPING=true
+      - AUTO_RECORD=true
+      - MAINTENANCE=false
+    volumes:
+      - ./sessions:/app/sessions
+      - ./database:/app/database
+      - ./logs:/app/logs
+    networks:
+      - simon-network
+
+networks:
+  simon-network:
+    driver: bridge
