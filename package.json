@@ -1,0 +1,37 @@
+{
+  "name": "simon-tech-bot",
+  "version": "2.0.0",
+  "description": "WhatsApp Multi Device Bot with Telegram Pairing",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "node test.js"
+  },
+  "keywords": [
+    "whatsapp",
+    "bot",
+    "telegram",
+    "baileys",
+    "multi-device"
+  ],
+  "author": "SIMON TECH",
+  "license": "MIT",
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.7.7",
+    "node-telegram-bot-api": "^0.66.0",
+    "pino": "^9.0.0",
+    "dotenv": "^16.4.5",
+    "fs-extra": "^11.2.0",
+    "axios": "^1.6.0",
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
