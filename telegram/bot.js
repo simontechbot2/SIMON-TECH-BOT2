@@ -30,8 +30,7 @@ This is the control panel for SIMON TECH BOT - A powerful WhatsApp bot with 800+
 /info - Bot information
 /menu - WhatsApp menu
 
-⚠️ *Note:* Only the owner can access all features.
-`;
+⚠️ This bot is public — everyone can use available features.
 
     bot.sendMessage(msg.chat.id, welcomeText, { parse_mode: "Markdown" });
   });
@@ -47,9 +46,9 @@ This is the control panel for SIMON TECH BOT - A powerful WhatsApp bot with 800+
 /ping - Check if bot is responding
 /status - Get bot status
 /info - Bot information
-/menu - Show WhatsApp commands menu
 
-👔 *Owner Only:*
+
+⚠️ This bot is public — everyone can use available features.
 /pair <number> - Pair WhatsApp number
 /qr - Get WhatsApp QR code
 /restart - Restart the bot
