@@ -7,20 +7,8 @@ function startTelegramBot() {
     polling: true
   });
 
-  // Start command
   bot.onText(/\/start/, (msg) => {
-    const welcomeText = `
-🤖 *Welcome to SIMON TECH BOT*
-
-👋 Hey ${msg.from.first_name}!
-
-This is the control panel for SIMON TECH BOT - A powerful WhatsApp bot with 800+ commands.
-
-🆔 *Your Info:*
-• ID: \`${msg.from.id}\`
-• Name: ${msg.from.first_name}
-
-📖 *Aconst welcomeText = `
+  const welcomeText = `
 🤖 Welcome to SIMON TECH BOT
 
 👋 Hey ${msg.from.first_name}!
@@ -28,7 +16,7 @@ This is the control panel for SIMON TECH BOT - A powerful WhatsApp bot with 800+
 This is a public WhatsApp bot.
 
 🆔 Your Info:
-• ID: `${msg.from.id}`
+• ID: ${msg.from.id}
 • Name: ${msg.from.first_name}
 
 📖 Commands:
@@ -38,6 +26,12 @@ This is a public WhatsApp bot.
 /status
 /pair <number>
 /menu
+
+⚠️ This bot is public — everyone can use available features.
+`;
+
+  bot.sendMessage(msg.chat.id, welcomeText, { parse_mode: "Markdown" });
+});
 
 ⚠️ This bot is public and available for everyone.
 `;
