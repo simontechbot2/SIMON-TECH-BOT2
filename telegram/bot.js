@@ -20,15 +20,29 @@ This is the control panel for SIMON TECH BOT - A powerful WhatsApp bot with 800+
 • ID: \`${msg.from.id}\`
 • Name: ${msg.from.first_name}
 
-📖 *Available Commands:*
-/start - Show this message
-/help - View all commands
-/ping - Check bot status
-/status - Bot status info
-/pair <number> - Pair WhatsApp number
-/qr - Get WhatsApp QR code
-/info - Bot information
-/menu - WhatsApp menu
+📖 *Aconst welcomeText = `
+🤖 Welcome to SIMON TECH BOT
+
+👋 Hey ${msg.from.first_name}!
+
+This is a public WhatsApp bot.
+
+🆔 Your Info:
+• ID: `${msg.from.id}`
+• Name: ${msg.from.first_name}
+
+📖 Commands:
+/start
+/help
+/ping
+/status
+/pair <number>
+/menu
+
+⚠️ This bot is public and available for everyone.
+`;
+
+I should put it like this
 
 ⚠️ This bot is public — everyone can use available features.
 
